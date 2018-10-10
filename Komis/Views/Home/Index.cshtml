@@ -1,0 +1,18 @@
+﻿@model Komis.ViewModels.HomeVM
+
+
+<h2>@Model.Tytul</h2>
+
+@foreach (var samochod in Model.Samochody)
+{
+    <div>
+        <h2>@samochod.Marka</h2>
+        <h2>@samochod.Model</h2>
+        <h3>@samochod.RokProdukcji</h3>
+        <h3>@samochod.Przebieg</h3>
+        <h4>@samochod.Pojemnosc</h4>
+        <h4>@samochod.Moc</h4>
+        <h5>@samochod.Cena.ToString("c")</h5>
+        <p>@samochod.Opis</p>
+    </div>
+}
