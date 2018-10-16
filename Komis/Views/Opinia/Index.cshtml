@@ -1,0 +1,39 @@
+﻿@model Opinia
+
+<form asp-action="Index" method="post" class="form-horizontal" role="form">
+
+    <div class="form-group">
+        <label asp-for="NazwaUzytkownika" class="col-md-2 control-label"></label>
+        <div class="col-md-5">
+            <input asp-for="NazwaUzytkownika" class="form-control" />
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Email" class="col-md-2 control-label"></label>
+        <div class="col-md-5">
+            <input asp-for="Email" class="form-control" />
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Wiadomosc" class="col-md-2 control-label"></label>
+        <div class="col-md-5">
+            <textarea asp-for="Wiadomosc" class="form-control"></textarea>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="OczekujeOdpowiedzi" class="col-md-2 control-label"></label>
+        <div class="col-md-5">
+            <input type="checkbox" asp-for="OczekujeOdpowiedzi" class="form-control" />
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-5">
+            <input type="submit" class="btn btn-primary" value="Wyślij opinię" />
+        </div>
+    </div>
+
+</form>

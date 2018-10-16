@@ -22,6 +22,7 @@ namespace Komis
         {
             services.AddDbContext<AppDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
             services.AddTransient<ISamochodRepository, SamochodRepository>();
+            services.AddTransient<IOpiniaRepository, OpiniaRepository>();
             services.AddMvc();
         }
 
