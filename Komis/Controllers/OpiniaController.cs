@@ -1,8 +1,10 @@
 ﻿using Komis.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Komis.Controllers
 {
+    [Authorize]
     public class OpiniaController : Controller
     {
         private readonly IOpiniaRepository _opiniaRepository;
