@@ -25,5 +25,22 @@ namespace Komis.Controllers
 
             return View(samochod);
         }
+
+        public IActionResult Create()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult Create(Samochod samochod)
+        {
+            if (ModelState.IsValid)
+            {
+                _samochodRepository.DodajSamochod(samochod);
+                return RedirectToAction(nameof(Index));
+            }
+            return View(samochod);
+        }
     }
 }

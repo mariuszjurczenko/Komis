@@ -1,0 +1,78 @@
+﻿@model Samochod
+
+<h2>Dodaj Samochod</h2>
+<hr />
+<div class="row">   
+    <form asp-action="Create">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <div class="col-md-4">
+            <div class="form-group">
+                <label asp-for="Marka" class="control-label"></label>
+                <input asp-for="Marka" class="form-control" />
+                <span asp-validation-for="Marka" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Model" class="control-label"></label>
+                <input asp-for="Model" class="form-control" />
+                <span asp-validation-for="Model" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="RokProdukcji" class="control-label">Rok Produkcji</label>
+                <input asp-for="RokProdukcji" class="form-control" />
+                <span asp-validation-for="RokProdukcji" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Przebieg" class="control-label"></label>
+                <input asp-for="Przebieg" class="form-control" />
+                <span asp-validation-for="Przebieg" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Pojemnosc" class="control-label"></label>
+                <input asp-for="Pojemnosc" class="form-control" />
+                <span asp-validation-for="Pojemnosc" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="form-group">
+                <label asp-for="RodzajPaliwa" class="control-label">Rodzaj Paliwa</label>
+                <input asp-for="RodzajPaliwa" class="form-control" />
+                <span asp-validation-for="RodzajPaliwa" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Moc" class="control-label"></label>
+                <input asp-for="Moc" class="form-control" />
+                <span asp-validation-for="Moc" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Cena" class="control-label"></label>
+                <input asp-for="Cena" class="form-control" />
+                <span asp-validation-for="Cena" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Opis" class="control-label"></label>
+                <input asp-for="Opis" class="form-control info" />
+                <span asp-validation-for="Opis" class="text-danger"></span>
+            </div>
+            <input type="hidden" asp-for="ZdjecieUrl" value="@ViewBag.ImgPath" />
+            <input type="hidden" asp-for="MiniaturkaUrl" value="@ViewBag.ImgPath" />
+            <div class="form-group">
+                <div class="checkbox">
+                    <label>
+                        <input asp-for="JestSamochodemTygodnia" /> Jest Samochodem Tygodnia
+                    </label>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="checkbox">
+                    <label>
+                        <input asp-for="JestWCentrali" /> Jest W Centrali
+                    </label>
+                </div>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Dodaj samochód" class="btn btn-success" style="margin-top:30px" />
+                <a asp-action="Index" class="btn btn-danger pull-right" style="margin-top:30px">Powrót</a>
+            </div>
+        </div>
+    </form>
+</div>
